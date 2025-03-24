@@ -1,0 +1,14 @@
+[Unit]
+Description=Bluetooth AIC8800
+After=bluetooth.target
+
+[Service]
+Type=simple
+ExecStartPre=/usr/sbin/rfkill unblock all
+ExecStart=/usr/bin/hciattach -s 1500000 /dev/ttyS1 any 1500000 flow nosleep
+TimeoutSec=0
+RemainAfterExit=yes
+SysVStartPriority=99
+
+[Install]
+WantedBy=multi-user.target
