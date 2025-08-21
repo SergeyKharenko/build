@@ -24,13 +24,13 @@ jobs:
 
     steps:
       - name: Checkout repository
-        uses: actions/checkout@v4
+        uses: actions/checkout@v5
         with:
           fetch-depth: 2
 
       - name: Get changed files
         id: changed-files
-        uses: tj-actions/changed-files@055970845dd036d7345da7399b7e89f2e10f2b04 # v46.0.3
+        uses: tj-actions/changed-files@2036da178f85576f1940fedb74bb93a36cd89ab7 # v46.0.3
 
       - name: List all changed files
         run: |
