@@ -1,0 +1,3 @@
+KERNEL=="system", SUBSYSTEM=="dma_heap", MODE="0660", GROUP="video"
+KERNEL=="system-uncached", SUBSYSTEM=="dma_heap", MODE="0660", GROUP="video"
+KERNEL=="reserved", SUBSYSTEM=="dma_heap", MODE="0660", GROUP="video"
