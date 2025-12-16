@@ -1,0 +1,5 @@
+Types: deb
+URIs: https://mirrors.tuna.tsinghua.edu.cn/armbian
+Suites: bookworm
+Components: main bookworm-utils bookworm-desktop
+Signed-By: /usr/share/keyrings/armbian-archive-keyring.gpg

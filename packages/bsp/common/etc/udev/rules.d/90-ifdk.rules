@@ -1,5 +1,0 @@
-# This is used to change the default configuration of IFDK Device
-
-# IFDK Board
-SUBSYSTEM=="tty", ENV{ID_USB_INTERFACE_NUM}=="01", ATTRS{serial}=="HSM*", MODE="0666", SYMLINK+="tty%s{serial}"
-
