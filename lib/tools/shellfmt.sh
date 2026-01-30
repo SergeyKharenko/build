@@ -2,7 +2,7 @@
 #
 # SPDX-License-Identifier: GPL-2.0
 #
-# Copyright (c) 2013-2023 Igor Pecovnik, igor@armbian.com
+# Copyright (c) 2013-2026 Igor Pecovnik, igor@armbian.com
 #
 # This file is a part of the Armbian Build Framework
 # https://github.com/armbian/build/
@@ -47,7 +47,11 @@ echo "SHELLFMT_BIN: ${SHELLFMT_BIN}"
 
 if [[ ! -f "${SHELLFMT_BIN}" ]]; then
 	echo "Cache miss, downloading..."
-	wget -O "${SHELLFMT_BIN}" "${DOWN_URL}"
+	curl -fLo "${SHELLFMT_BIN}" "${DOWN_URL}" || {
+		echo "shellfmt download failed from ${DOWN_URL}"
+		rm -f "${SHELLFMT_BIN}"
+		exit 1;
+	}
 	chmod +x "${SHELLFMT_BIN}"
 fi
 
