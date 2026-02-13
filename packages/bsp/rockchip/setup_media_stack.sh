@@ -14,11 +14,11 @@ rm -rf librga                                                       # Cleanup so
 # === Install latest release of mpp ===
 git clone https://github.com/HermanChen/mpp.git --depth 1 mpp
 cd mpp
-cmake -G Ninja -DCMAKE_INSTALL_PREFIX=/usr .                        # Configure build, install to /usr
-ninja                                                               # Build
-ninja install                                                       # Install into rootfs
+cmake -G Ninja -DCMAKE_INSTALL_PREFIX=/usr -DCMAKE_BUILD_TYPE=Release . # Configure build, install to /usr
+ninja                                                                   # Build
+ninja install                                                           # Install into rootfs
 cd ..
-rm -rf mpp                                                          # Cleanup source directory
+rm -rf mpp                                                              # Cleanup source directory
 
 # === Install gst-plugins-rockchip ===
 git clone https://github.com/SergeyKharenko/gst-plugins-rockchip.git --depth=1 gst-plugins-rockchip
