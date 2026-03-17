@@ -1,0 +1,8 @@
+[Desktop Entry]
+Type=Application
+Exec=/bin/bash -c "/usr/local/bin/rotate_dsi1_tp_8.sh"
+Hidden=false
+NoDisplay=false
+X-GNOME-Autostart-enabled=true
+Name=8 Screen and Touch Rotation
+Comment=Automated screen and touchscreen rotation for all users
