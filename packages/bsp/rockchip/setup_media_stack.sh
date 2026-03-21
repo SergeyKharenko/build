@@ -12,7 +12,7 @@ cd ..
 rm -rf librga                                                       # Cleanup source directory
 
 # === Install latest release of mpp ===
-git clone https://github.com/HermanChen/mpp.git --depth 1 mpp
+git clone https://github.com/rockchip-linux/mpp.git --depth 1 mpp
 cd mpp
 cmake -G Ninja -DCMAKE_INSTALL_PREFIX=/usr -DCMAKE_BUILD_TYPE=Release . # Configure build, install to /usr
 ninja                                                                   # Build
